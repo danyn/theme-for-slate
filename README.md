@@ -79,7 +79,7 @@ This theme starter also included a few css rules:
  
  One to hide the preview bar as it always seems to be in the way while designing.
  
- One to hide the extra input selectors that are generated when js is turned off.  The code iterates through the product variants in the <no script> tag and also through product.options in the liquid that is intended to work by js selecting a variant  based on product.options in real time, while also managing the history state and visible url to reflect the current variant. Thus without hiding the selectors two sets will show when js is turned off.
+ One to hide the extra input selectors that are generated when js is turned off.  The code iterates through the product variants in the ```<no script>``` tag and also through product.options in the liquid that is intended to work by js selecting a variant  based on product.options in real time, while also managing the history state and visible url to reflect the current variant. Thus without hiding the selectors two sets will show when js is turned off.
 
 More Issues:
 
