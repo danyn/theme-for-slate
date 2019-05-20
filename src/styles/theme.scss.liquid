@@ -1,0 +1,19 @@
+/**
+ * Insert your styles with Liquid below.
+ *
+ * Import additional stylesheets into this sheet using CSS imports:
+ * @import url('./global/form.scss');
+ */
+
+{% comment %} temp styles {% endcomment %}
+
+{% comment %} hide the preview bar iframe {% endcomment %}
+iframe#preview-bar-iframe {
+    display: none;
+}
+
+{% comment %} hide the selectors for the product pages when there is no js because it will use no script version {% endcomment %}
+
+.no-js .js__dependant {
+    display: none;
+}
