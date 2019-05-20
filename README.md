@@ -32,10 +32,15 @@ Reason for this Repository:
 There seems to be an issue with the product.js file not working for products without variants.  You can read the comments in the file that defines the class in node modules as that seems to be the only documentation on the actual workings of this by looking at the includes in scripts/sections/product.js.
 
 The files with code examples or changes are:
+
 templates/product
+
 templates/product_no-variant
+
 sections/product
+
 section/product_no-variant
+
 
 I had inteded to add more comments the code, that may be a good idea to get a better idea what is going on.
 
@@ -45,28 +50,32 @@ Alternately it might be worth at least understanding older working version of js
 https://help.shopify.com/en/themes/development/templates/product-liquid
 https://help.shopify.com/en/themes/customization/products/variants/use-products-with-multiple-options
 
-Although:
-
-The examples show jquery dependency 
-
-The examples inline the js into the document which is not in the spirit of why slate is good at seperating theme assets and only inluding them where needed.
-
+Also:
 
 ** all products even ones that have no variants do have at least one 'variant' as the variant object contains more and different properties than the product object
 
-the product object contains all the page level stuff and is also a reference to the variant object
+the product object contains all the page level stuff and is also a reference to the variant object:
 
 the variant object contains all the important stuff including the id of the the 'product' ie 'variant' that must be inside the product form in order for the form to submit and this the nature of the error we are seeing.
 
+https://help.shopify.com/en/themes/liquid/objects/product
+
+https://help.shopify.com/en/themes/liquid/objects/variant
+
+
+try comparing these objects to get a sense of what is going on
+
+
 So either of these would work:
-
+```
 <input type="hidden" name="id" value="{{ product.variants.first.id }}"> 
-
+```
 where  current_variant = product.selected_or_first_available_variant
+```
 <input type="hidden" name="id" value="{{ current_variant.id }}">
+```
 
-
-This theme also included a few css rules:
+This theme starter also included a few css rules:
  
  One to hide the preview bar as it always seems to be in the way while designing.
  
