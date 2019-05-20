@@ -35,7 +35,7 @@ The files with code examples or changes are:
 
 templates/product
 
-templates/product_no-variant
+templates/product.no-variant
 
 sections/product
 
