@@ -90,6 +90,6 @@ PRICES:
   1. {{ current_variant.compare_at_price | money }} returns a span
   2.  document.innerHtml outputs everything as text so it prints out the html tags to the screen
   3. this is probably not what is wanted.
-  4. insertAdjacentHTML works well along with document.innerText to remove what was there before but it could be a css risk though this is not user generated content and is coming from the server without modification.
+  4. insertAdjacentHTML works well along with document.innerText to remove what was there before but it could be a xss risk though this is not user generated content and is coming from the server without modification.
   5. could write a function that inserts only the price inside the span instead of the whole span.
   6. works without javascript enabled becuse liquid just inserts the span into the document but obviously does not update on selection so its useless.
